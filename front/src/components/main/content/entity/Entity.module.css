@@ -1,0 +1,7 @@
+.entity {
+    display: flex;
+    text-align: center;
+    width: 150px;
+    height: 100px;
+    background-color: purple;
+}
