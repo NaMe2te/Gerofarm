@@ -2,7 +2,7 @@
 using Backend.DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Backend.DataAccess;
+namespace Backend.DataAccess.Database;
 
 public class DatabaseContext : DbContext
 {
@@ -17,5 +17,10 @@ public class DatabaseContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new PostConfiguration());
+
+        if (Posts.Any())
+        {
+            new DatabaseInitializer(modelBuilder).Seed();
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Backend.Application.Dto;
 using Backend.Application.Mapping;
 using Backend.DataAccess;
+using Backend.DataAccess.Database;
 using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Application.Services.Implementations;
