@@ -2,9 +2,8 @@
 
 public class Post
 {
-    public Post(int id, string title)
+    public Post(string title)
     {
-        Id = id;
         Title = title;
     }
 

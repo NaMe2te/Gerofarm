@@ -3,15 +3,15 @@ using Backend.DataAccess.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
-var configuration = app.Configuration;
 
 builder.Services.AddControllers();
 
 builder.Services
     .AddApplication()
-    .AddDataAccess(x => x.UseLazyLoadingProxies().UseSqlite("Data Source=gerofarm.db"));
+    .AddDataAccess(x => x.UseSqlite("Data Source=gerofarm.db"));
     
+
+var app = builder.Build();
 
 app.UseHttpsRedirection();
 

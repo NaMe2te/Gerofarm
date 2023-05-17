@@ -16,9 +16,9 @@ public class PostController : Controller
     }
 
     [HttpGet("get-posts")]
-    public async Task<ActionResult<IEnumerable<PostDto>>> GetPosts([FromQuery] int getPostsCount, int alreadyPostsExistCount = 0)
+    public ActionResult<IEnumerable<PostDto>> GetPosts([FromQuery] int getPostsCount, int alreadyPostsExistCount = 0)
     {
-        IEnumerable<PostDto> posts = await _service.GetPosts(getPostsCount, alreadyPostsExistCount);
+        IEnumerable<PostDto> posts = _service.GetPosts(getPostsCount, alreadyPostsExistCount);
         return Ok(posts);
     }
 }

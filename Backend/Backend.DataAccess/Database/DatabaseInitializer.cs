@@ -1,4 +1,5 @@
-﻿using Backend.DataAccess.Models;
+﻿using System.Text;
+using Backend.DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Backend.DataAccess.Database;
@@ -12,12 +13,5 @@ public class DatabaseInitializer
         _modelBuilder = modelBuilder;
     }
 
-    public void Seed()
-    {
-        var posts = new List<Post>();
-        for (int i = 0; i < 500; i++)
-            posts.Add(new Post(default, ""));
-        
-        _modelBuilder.Entity<Post>().HasData(posts);
-    }
+    
 }

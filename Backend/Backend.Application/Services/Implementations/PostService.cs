@@ -15,13 +15,12 @@ public class PostService : IPostService
         _context = context;
     }
 
-    public async Task<IEnumerable<PostDto>> GetPosts(int getPostsCount, int alreadyPostsExistCount = 0)
+    public IEnumerable<PostDto> GetPosts(int getPostsCount, int alreadyPostsExistCount = 0)
     {
-        var posts = await _context.Posts
+        return _context.Posts
+            .OrderBy(post => post.Id)
             .Skip(alreadyPostsExistCount)
             .Take(getPostsCount)
-            .ToListAsync();
-
-        return posts.Select(post => post.AdDto());
+            .Select(post => post.AdDto());
     }
 }
