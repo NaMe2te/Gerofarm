@@ -1,0 +1,15 @@
+version: '1'
+services:
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile.back
+    ports:
+      - '80:80'
+      - '443:443'
+  frontend:
+    build:
+      context: ./front
+      dockerfile: Dockerfile.front
+    ports:
+      - '3000:3000'

@@ -4,6 +4,8 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>d2399ce5-d8b3-43f9-ac61-dcb3ea2d4770</UserSecretsId>
+        <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,6 +15,7 @@
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.0-preview.4.23259.3" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0-preview.4.23259.3" />
+      <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
     </ItemGroup>
 
 </Project>
