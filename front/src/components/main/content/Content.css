@@ -1,0 +1,10 @@
+.content {
+    flex: 1;
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 30px
+}

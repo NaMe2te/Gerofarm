@@ -4,7 +4,8 @@
 }
 
 body {
-  min-width: 1020px;
-  background-color: red;
+  min-width: 500px;
+  min-height: 310px;
+  overflow-y: hidden;
 }
 

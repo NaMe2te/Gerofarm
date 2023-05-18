@@ -1,7 +1,9 @@
 .entity {
-    display: flex;
-    text-align: center;
-    width: 150px;
-    height: 100px;
     background-color: purple;
+    border-radius: 10px;
+    flex: 0 0 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
